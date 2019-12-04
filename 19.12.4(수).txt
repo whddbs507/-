@@ -1,0 +1,36 @@
+JIT과 AOT가 나온 이유 : 기존의 컴파일을 누르고 컴파일을 하게 되면 속도가 느리기 때문에 실행속도를 높이기 위해 다음과 같은 방안을 내놓음.
+JIT (Just in time) : 프로그램을 실행한 후 미리 컴파일 (딜레이 타임이 발생) <실행 중 미리 가상코드를 기계어로 바꿔 놓음>
+AOT (Ahead of time) : 설치하면서 미리 컴파일 (설치 시의 속도가 느림) <설치하면서 가상코드를 기계어로 바꿔 놓음>
+서로의 단점을 보완하기 위해 JIT+AOT를 결합하는 방식을 사용
+
+
+.java ---(Java Compiler)---> 중간언어(Bytecode(class파일)) ---> JVM ---> OS
+
+.java(source file) : 우리가 표현하기 쉬운 소스 코드를 사용해서 만든 파일
+.class(class file) : 바이트 코드(기계어)를 사용해서 만든 파일 (java : .class, c언어 : .obj)
+JVM(Interpreter) : 클래스 파일을 해석할 수 있는 가상 머신 [ex) java.exe]
+bytecode = class파일 = p-code = IR
+
+
+.js(javascript) -----(문법 검사)---------> node.exe(Interpreter)(Engine) ---> OS
+
+.js는 실행하게 되면 한줄 씩 읽으면서 문법 오류 검사를 수행한다. (Interpreting 과정)
+한줄 씩 동작하기 때문에 속도가 늦다.
+실행되기 전에는 오류가 드러나지 않는다.
+
+
+
+Maven : 
+
+Maven 표준 디렉터리 구조
+[ src/ ]
+         [ main/ ]
+                    [ java/ ]		< 자바 소스 파일    ex) .java
+                    [ resources/ ]	< 실행중에 사용할 기타 파일    ex) .properties, .txt, .xml 등
+                    [ webapp/ ]		
+         [ test/ ]
+                    [ java/ ]		< 단위 테스트동안 사용하는 자바 소스 파일    ex) .java
+                    [ resources ]		< 단위 테스트동안 사용하는 기타 파일    ex) .properties, .txt, .xml 등
+
+C:\Users\park\git> javac -d practice/bin/main  practice/src/main/java/com/ohoracs/ok/Hello3.java
+C:\Users\park\git> java -cp practice/bin/main com.ohoracs.ok.Hello3   
