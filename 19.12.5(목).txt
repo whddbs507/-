@@ -1,0 +1,58 @@
+명령어 작성 (.java, .xml, .html, .css, .js) --> 컴파일<실행할 수 있도록 번역>(.class) --
+ -> 단위테스트(Junit) --> 배치파일 생성(.jar, .war, .zip) --> 서버에 업로드
+
+
+
+      Ant 	   ->	 Maven	    ->	 Gradle
+<build.xml>       <form.xml>         <build.gradle>
+                                          (group이 언어를 사용하여 설정 스크립트 작성)
+
+
+Gradle : build 전 과정을 제어할 수 있는 프로그램
+meta data : 통상 표현하는 것
+element : tag
+
+
+
+< 1. Interpreter 방식 >
+
+[Hello.js]  ---->  [node.exe]  ----> [실행]
+- 실행할 때마다 문법검사 : 실행 속도가 느리다.
+- 실행한 부분만 문법검사 : 배포할 떄 문법 오류가 존재할 수 있다.
+- 소스를 읽어 실행 : 실행 속도가 느리다.
+
+< 2. Compiler 방식 >
+
+[Hello.c] ----> [Hello.obj]:::(object, lib 링커):::[stdio.lib] ----> [Hello.exe]
+- 기계어 : 실행속도가 빠르다.
+- 기계어 직접 실행 : Engine/VM이 필요 없음.
+- 플랫폼(cpu,OS)에 종속된다. 
+- 플랫폼이 다르면 다시 컴파일 해야 한다.
+
+< 3. Java 방식 (Interpreter + Compiler) >
+[Hello.java] -> [Hello.class] -> [JVM(java.exe)(인터프리터)] -> 실행
+- 문법검사 완료 후 실행
+- 문제점 : 진짜 기계어가 아니기 때문에 실행할때마다 JVM의 도움을 받아야 한다.
+             실행속도는 C방식보다 느리다.
+- 위의 문제점을 보완하기 위해 JIT/AOT 방식으로 보완해냈다.
+                   
+DSL(Domain Specific Language) : 특정 영역에서 사용할 언어
+
+
+scoop install gradle
+C:\Users\user > cd test
+gradle init
+2.application
+3.Java
+1.Groovy
+1.JUnit 4
+com.ohoracs.ok
+
+
+C:\Users\user\git\bitcamp-study\bitcamp-java> javac -encoding UTF-8 -d bin/main src/main/java/com/ohoracs/basic/ex11/Exam11.java
+
+
+java는 컴파일 하게되면 각각의 class단위로 파일이 나온다.
+
+public class : 공개 클래스
+class : 비공개 클래스
