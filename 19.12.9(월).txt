@@ -1,0 +1,80 @@
+<<< 보수 >>>
+
+보수 : 그 수가 되기 위해서 보충해 주는 수
+
+기본 수가 만약 7이라면...
+1의 보수 : 6
+2의 보수 : 5
+5의 보수 : 2
+10의 보수 : 3
+
+1의 보수 범위 (8비트 기준) : -127 ~ +127
+
+
+
+
+<<< 문자 리터럴 >>>
+"character set" : 문자에 대해 코드 값 정의 표
+
+1 . ASCII < 7bit >   -   영어 대소문자, 숫자, 특수문자 등 약 90여개 문자에 대해 코드 값 정의
+A -> 100 0001
+B -> 100 0010
+C -> 100 0011
+a -> 110 0001
+b -> 110 0010
+c -> 110 0011
+0 -> 011 0000
+1 -> 011 0001
+2 -> 011 0010
+
+2 . ISO-8859-1(ISO-Latin-1) < 8bit >  -   ASCII + 서유럽 문자 = 200여개 가량
+
+3. EUC-KR < 16bit >    - 	영어 -> ISO-8859-1 <8bit>
+                       		한글 -> 2byte 코드 값
+가 -> 0xBoA1
+각 -> 0xBoA2
+똘 -> 0xB6CA
+똠 -> 사용못함
+똡 -> 사용못함
+똣 -> 사용못함
+똥 -> 0xB6CB
+한글 => 총 2350자
+
+4. MS949 (EUC-KR + 알파 = 11172자)
+가 -> 0xBoA1
+각 -> 0xBoA2
+똘 -> 0xB6CA
+똠 -> 0x8C63
+똡 -> 0x8C64
+똣 -> 0x8C65
+똥 -> 0xB6CB
+
+5. 유니코드 ( UCS-2 = 영어, 한글 모두 2byte )
+A -> 0x0041
+B -> 0x0042
+가 -> 0xAC00
+각 -> 0xAC01   : 11172자 + 옛한글 + 한글전용한자
+
+6. UTF-8 ( 영어는 그대로 1byte 사용 ) 
+A -> 0x41
+B -> 0x42
+그 외의 문자는 규칙에 따라 2~4byte로 변환.
+(한글일 경우, UCS-2에서 -> 1110xxxx 10xxxxxx 10xxxxxx로 변경)
+가 -> 11101010 10110000 10000000  => EAB080
+
+File / Network : UTF-8      (고객)
+JVM              : Unicode   (서버)
+
+web server : java
+web browser : css, javascript
+
+
+
+<문자>                   <UCS-2>                      <UTF-8>                         <URL Data>
+  A ---(encoding)--->> 0041 ---(encoding)--->>     41   ---(encoding)--->>        41
+  A <<---(decoding)--- 0041 <<---(decoding)---     41   <<---(decoding)---        41
+ 가 ---(encoding)--->> AC00 ---(encoding)--->> EAB080 ---(encoding)--->>  %EA%B0%80
+ 가 <<---(decoding)--- AC00 <<---(decoding)--- EAB080 <<---(decoding)--- %EA%B0%80
+문자를 URL Data로 바꾸는 것을 "URL Encoding", URL Data를 문자로 바꾸는 것을 "URL decoding"
+
+
