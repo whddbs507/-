@@ -1,0 +1,32 @@
+bitcamp-java : 문법
+bitcamp-project : 강사와 같이 프로젝트
+Myproject : 내 개인 프로젝트
+
+
+gradle init : gradle을 사용하여 폴더 만들기
+.gradle : 그레이들 설정 파일
+gradle : 서버에 업로드 시키는 업로드 파일
+
+
+[build 파일]
+distributions = 다른사람이 보기 좋게끔 zip파일로 정리해 놈.
+.jar = java archive (자바 보관)
+
+
+gradle compilejava
+java -cp build/classes/java/main com.eomcs.lms.App
+
+
+
+tasks.withType(JavaCompile) {
+    // 프로젝트의 소스 파일 인코딩을 알려준다.
+    options.encoding = 'UTF-8' 
+
+    // 소스 파일을 작성할 때 사용할 자바 버전 
+    sourceCompatibility = '1.8'
+
+    // 자바 클래스를 실행시킬 JVM의 최소 버전
+    targetCompatibility = '1.8'
+}
+
+gradle tasks --all
