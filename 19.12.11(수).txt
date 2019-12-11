@@ -1,0 +1,48 @@
+객체지향 -> 예시) 	상자.상자 속 주머니.주머니 속 물건
+	           	물건.기능명(값);   ==>    온풍기.기능명(20, 20, "와아아", false);
+                	물건.방식.메소드(값);   ==>   System.out.println("hello world");
+
+
+
+java.util.Scanner keyboard = new java.util.Scanner(System.in);
+keyboard = 도구 (레퍼런스)
+
+String no = keyboard.nextLine();
+no : 문자열을 담을 메모리 (레퍼런스)
+=(assignment operator) : 우측에 있는 내용을 좌측에 넣음
+nextline : 엔터치기 전까지 문자열을 리턴.
+
+println :
+printf(print format) : 형식(변수를 받는)을 정해놓고 변수를 이용해 값을 삽입하기 위해 사용
+
+
+<< * 데이터 저장 -> 변수 -> 변수 선언 >>
+- 데이터 저장
+변수 -> RAM
+파일 -> HDD
+
+- 변수? 데이터를 저장하기 위해 확보한 메모리
+< 값을 저장하는 공간 >
+OS안에 JVM이 있는데 JVM안에 Method, Heap, Stack이 존재
+Method : 클래스 파일의 바이트 코드가 로드되는 곳
+Heap : new 명령을 통해 생성된 인스턴스 변수
+Stack : 변수를 임의로 사용하는 공간
+
+- 변수 선언? 데이터 저장할 메모리를 준비시키는 명령
+[data type] [variable];
+data type(메모리 종류) variable(메모리 별명);
+int i;
+int : data type
+i : variable
+:: Data Type
+정수 -> byte(1), short(2), int(4), long(8)
+부동소수점 -> float(4), double(8)
+논리 -> boolean(4)
+문자 -> char(2)
+primitive data type(자바 기본 타입) : byte, short, int, long, float, double, boolean, char
+
+byte b;  => b라는 공간에 1바이트를 준다.
+b = 10; => 바이트라는 공간에 10이라는 내용을 넣는다.
+b = 130; (x) => 1바이트이므로 -128~127까지여서 130은 되지 않는다.
+
+byte : -128 ~ 127
