@@ -1,0 +1,12 @@
+ex4-Exam31~41~
+ex99-exam11
+
+
+
+                                                                                [가공]             [return]
+keyboard ---(전기적 신호)--->> System.in ---(byte 배열)--->> Scanner ------>> 문자열
+                                    <InputStream>            <nextInt:공백,탭 만나면 짜름>
+                                                                  <nextLine:엔터누르면 짜름>
+java.io.InputStream keyboard = System.in;
+java.util.Scanner scanner = new java.util.Scanner(keyboard)
+
