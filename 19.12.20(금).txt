@@ -1,0 +1,56 @@
+int i; << [Data type] 변수;  메모리종류 이름;
+
+- primitive data type
+정수 : byte(1), short(2), int(4), long(8)
+부동소수점 : float(4), double(8)
+논리 : boolean
+문자 : char(2)
+
+- 사용자 정의 데이터 타입(user defined data type)
+
+class 데이터 타입		class Member {
+데이터 변수 선언		int no;
+.			String name;
+.			String email;
+.			boolean working;
+}			}
+
+Member m = new Member();
+Member : 사용자 데이터 타입
+m : 레퍼런스
+new Member(); : 주소 값
+
+
+/////////////////////////////
+
+switch (a) {
+  case 1:
+     int b;
+     break;
+  case 2:
+     int b; (컴파일 오류!)       <<< 다른 블록이 아닌 switch 문 내부로 봐야함!!
+     break;
+}
+
+
+
+* 아규먼트(argument)
+ => 메서드를 호출할 때 넘겨주는 값
+ => 예) hello("홍길동", 20);
+    "홍길동", 20 이 아규먼트이다.
+
+*파라미터(parameter)
+ => 아규먼트를 받는 변수
+ => 예) void hello(String name, int age) {...}
+    name과 age 변수가 파라미터이다.
+
+
+/////////
+
+[ Stack ] - 가상 메모리 영역
+
+[ Heap ] - 가상 주소 영역
+
+[ Method Area ] - 코드 영역
+class Exam0310
+class Exam0320
