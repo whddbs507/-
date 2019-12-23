@@ -1,0 +1,104 @@
+ex07.test02answer 참조
+//////////////////////////////////////////////////////////
+Exam0410 참조
+public class Exam0410 {
+
+  static void swap(int a, int b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    System.out.printf("swap(): a=%d, b=%d\n", a, b);
+  }
+
+  public static void main(String[] args) {
+    int a = 100;
+    int b = 200;
+    swap(a, b);
+    System.out.printf("main(): a=%d, b=%d\n", a, b);
+  }
+}
+
+원코드 분석 !
+jvm -> method area , heap , jvm stack
+
+[ method area ]
+1. 클래스 loading
+2. 메인메소드 호출
+class Exam0410 {
+   main() {
+       ...
+       ...                    <<< 메인 메소드
+       ...
+   }
+   swap() {
+       ...
+       ...
+       ...
+   }
+}
+
+[ Heap ]
+
+[ JVM Stack ]
+
+1.main() -> args, a, b
+a : 100
+b : 200
+
+2.swap() -> a, b, temp
+a : 100 -> 200
+b : 200 -> 100
+temp : 100
+
+3.swap() 메모리 제거
+4.메인 메소드가 실행되면 main() 메모리 제거
+
+
+
+< 순서 >
+1. class loading (method area)
+2. main() 호출 (method area)
+3. main() 실행 중에 사용할 로컬 변수 준비 (jvm stack) - args, a=100, b=200
+4. a 와 b에 값 저장 (jvm stack)
+5. swap() 호출 (method area)
+6. swap()을 사용할 로컬 변수 준비 (jvm stack) - a, b, temp
+7. argument를 parameter에 저장(jvm stack) - a=100, b=200, temp
+8. 실행(method area, jvm stack) - temp=100,a=200,b=100
+9. return(jvm stack) -> swap() 메모리 삭제
+10. return(jvm stack) -> main() 메모리 삭제
+
+//////////////////////////////////////////////////////////////////
+
+nested class = inner class
+
+//////////////////////////////////////////////////////////////////////
+
+[ class ]
+
+-> 1. 사용자 정의 데이터 타입 : 메모리 구조 설계
+class Member {
+int no;
+String name;
+float height;
+}
+-> 2. 메서드 분류
+
+
+
+
+////////////////////////////////////////////////////////////////////
+
+ JVM이 메모리를 다루는 방법
+ - 크게 다음 세가지 영역으로 나눠 관리한다.
+ 1) Method Area
+    => 클래스 명령 코드를 둔다.
+    => static 변수를 둔다.
+ 2) Heap
+    => new 명령으로 만든 메모리(인스턴스=객체)를 둔다.
+    => Garbage Collector(GC)가 관리하는 영역이다.
+ 3) JVM Stack
+    => 스레드 별로 JVM Stack 메모리를 따로 관리한다.
+    => 메서드의 로컬 변수는 둔다.
+    => 각 메서드마다 프레임 단위로 관리한다.
+    => 메서드 호출이 끝나면 그 메서드가 사용한 
+       프레임 메모리가 제거된다.
