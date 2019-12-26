@@ -1,0 +1,53 @@
+<클래스/인스턴스>
+static String name;  << 클래스 소속 (static 있을 때)
+       String name << 인스턴스 소속 (static 없을 때)
+
+
+<접근 제어>
+public : 공공연하게 사용
+protected
+private : 오직 클래스 내부에서만 사용
+
+
+<<< 클래스 문법을 구성하는 것들 >>>
+<클래스 선언>         
+class Score{                 	> (public)
+   .......
+   .......
+}
+<필드 선언>
+String name;		> (default,public,protected,private // default,static)
+
+<메소드 선언>
+void m() {		> (default,public,protected,private // default,static)
+   ...
+   ...
+}
+
+<생성자 선언>		
+Score() {			> (default,public,protected,private // default,static)
+   ...
+   ...
+}
+
+<스태틱 블록 선언>
+static() {
+   ...
+   ...
+}
+
+<인스턴스 블록 선언>
+{
+   ...
+   ...
+}
+
+
+////////////////////////////////////////////
+
+메서드 - static, non-static
+static  - Score.calculate(s);   // Score - 클래스, ,calculate - 연산자, s - 피연산자
+non-static - s.calculate();   // s - 피연산자, calculate - 연산자
+
+///////////////////////////////////////////////
+
