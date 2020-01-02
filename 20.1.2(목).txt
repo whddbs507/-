@@ -1,0 +1,48 @@
+< 객체와의 관계 >
+1. 상속 (Inheritance)
+상위 : Car
+하위 : Truck, Sadari,
+
+class Truck extends Car {
+	....
+	....
+}
+
+
+2. 연관 (Association)  :  지속적인 사용
+Car -> CarCenter
+class Car {
+   CarCenter cc;
+}
+나 -> 친구
+
+
+3. 집합 (Aggregation)  :  포함하는 관계
+Car -> BlackBox
+class Car {   
+   BlackBox bb;
+}
+나 -> 안경
+나 -> 핸드폰
+컴퓨터 -> 키보드
+(느슨한 결합)
+
+4. 합성 (Composition)  :  포함하는 관계
+Car -> Engine
+class Car {
+   Engine e;
+   ....
+}
+나 -> 심장
+컴퓨터 -> CPU
+(강력한 결합)
+
+
+5. 의존 (Dependency) : 특정상황에서 사용
+class Car {
+   void 주유(주유소) {
+      ....
+   }
+}
+
+ex05
