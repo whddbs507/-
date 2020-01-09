@@ -1,0 +1,18 @@
+< 배열 복사 메서드 >
+
+** Arrays.copyOf(arr, size)	// 배열 공간 생성
+import java.util.Arrays
+Arrays.copy(Of(arraysOne,3) << arraysOne 배열을 3번 방까지 복사
+
+
+** System.arraycopy(Object src, int srcPos, Object dest, int destPos, length)
+src - 전송원배열
+srcPos - 소스 배열의 개시 위치
+dest - 전송처 배열
+destPos - 전송처 데이터내의 게시 위치
+length - 카피되는 배열 요소의 수
+System.arraycopy(array1, 0, array2, 0, array1.length);
+// array1의 0번 값을 array2의 0번 값부터 1개 길이만큼 복사
+System.arraycopy(array1, 0, array3, 2, 2);
+// array1의 0번 값을 array3의 2번 값부터 2개 길이만큼 복사
+
