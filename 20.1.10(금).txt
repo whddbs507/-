@@ -1,0 +1,26 @@
+corelib, generic
+
+문법
+String s1 = new String("Hello");
+H,e,l,l,o를 100번지에 저장.
+String s2 = new String("Hello");
+H,e,l,l,o를 200번지에 저장.
+
+String s3 = s1.replace('l', 'x');
+H,e,x,x,o를 300번지에 저장
+
+String s4 = s1.concat(", world!");
+H,e,l,l,o,,,w,o,r,l,d,!를 400번지에 저장
+
+
+StringBuffer buf = new StringBuffer("Hello");
+buf.replace(2,4,"xx");
+
+
+
+제너릭(Generic)
+    //   T - type
+    //   E - element
+    //   K - key
+    //   V - value
+    //   N - number
