@@ -1,0 +1,10 @@
+[shallow copy , deep copy] => eomcs.corelib.ex01.Exam0170 ~ 0173
+
+
+[ interface ] => eomcs.oop.ex09.a ~ b
+- 인터페이스를 이행하는 클래스는 인터페이스에 선언된 모든 메서드를
+반드시 구현해야 한다. 
+- 인터페이스에 정의하는 메서드는 호출 규칙이다.
+- 호출 규칙 : public , abstract , void (public, abstract 생략 가능)
+
+[ 일반화 및 상속 기법 ] => 프로젝트 v23
