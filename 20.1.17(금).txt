@@ -1,0 +1,2 @@
+저장하면서 이클립스에서 알아서 설정한 형식에 맞게 편리하게 설정해주는 거
+Window - Preferences - Editor - Save Actions
