@@ -1,0 +1,41 @@
+project v27
+com.eomcs.exception.ex01
+
+예외처리 -> File I/O -> Networking -> Multitasking(Thread) -> DMBS + SQL + JDBC
+-> Application Server -> Web(Servlet/JSP) -> HTML+CSS -> Spring Framework
+
+
+// 예외처리
+
+try {
+   예외가 발생할 수 있는 코드
+   ...
+   ...
+} catch (FileNotFoundExceptioln e) {
+   예외 처리 코드
+   ...
+   ...
+} finally {
+   마무리 코드
+   ...
+   ...
+}
+
+
+// 예외 방법
+
+1. 예외 던지기
+   throw 예외 객체;
+
+2. 예외 선언
+   void 메소드명() throws 예외, 예외, 예외... {
+      ...
+      ...
+   }
+
+// 예외클래스 계층도
+Object
+   - Throwable      : 예외 객체
+        - Error              : 시스템 예외 -> JVM에 전달
+        - Exception         : 애플리케이션 예외 -> 중간에서 처리 가능
+                -Runtime Exception
