@@ -1,2 +1,2 @@
-eomcs-java ->	com.eomcs.corelib.oop.ex11
+eomcs-java ->	com.eomcs.oop.ex11
                    	com.eomcs.corelib.ex02 ~ ex04
