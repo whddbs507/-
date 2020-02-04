@@ -1,0 +1,13 @@
+FileOutputStream, FileInputStream, FileWriter
+
+// => SOI(Start of Image) Segment 읽기: 2바이트
+// => JFIF-APP0 Segment Marker 읽기: 2바이트
+// => JFIF-APP0 Length: 2바이트
+// => JFIF-APP0 정보: 16바이트(위에서 알아낸 길이)
+// => JFIF-APP0 Identifier: 5바이트
+// => SOF0(Start of Frame) 정보 찾기 ( SOF Marker 찾기 ) [0xFFC0 ~ 0xFFC2]
+// => SOF Length 읽기: 2바이트
+// => SOF 데이터 읽기: 17바이트(위에서 알아낸 크기)
+// => SOF 샘플링 정밀도: 1바이트
+// => SOF 이미지 높이: 2바이트
+// => SOF 이미지 너비: 2바이트
