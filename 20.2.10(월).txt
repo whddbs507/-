@@ -1,0 +1,4 @@
+Scanner 클래스 : 정수, 실수, 문자열을 읽어 올 수 있는 클래스
+
+Scanner 		<----------------->  PrintStream
+DataInputStream 	<----------------->  DataOutputStream
