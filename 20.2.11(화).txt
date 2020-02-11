@@ -1,0 +1,9 @@
+ex05 06
+
+Connection-Oriented (TCP)
+	- 연결 후 데이터 통신
+	- 예) 전화
+
+Connectionless (UDP)
+	- 연결없이 목적지에 Data 전송
+	- 예) 편지

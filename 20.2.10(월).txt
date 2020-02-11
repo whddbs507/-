@@ -1,4 +1,10 @@
-Scanner 클래스 : 정수, 실수, 문자열을 읽어 올 수 있는 클래스
+Scanner 클래스 
+: 정수, 실수, 문자열을 읽어 올 수 있는 클래스.
 
+FileInputStream 클래스 
+: Input클래스를 상속받은 후손 클래스로 하드 디스크상에 존재하는 파일로
+부터 바이트 단위의 입력을 받는 클래스.
+              
 Scanner 		<----------------->  PrintStream
 DataInputStream 	<----------------->  DataOutputStream
+InputStreamReader	<----------------->  PrintWriter
