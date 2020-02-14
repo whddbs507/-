@@ -1,0 +1,24 @@
+new Thread()		준비 상태
+
+start()			Running 상태
+
+sleep()			Not Runnable 상태
+
+timeout			Running 상태
+
+Dead			Dead 상태
+
+
+
+new Thread()		준비 상태
+
+start()			Running 상태
+
+wait()			Not Running 상태
+
+notify()			Running 상태
+
+Dead			Dead 상태
+
+
+project36
