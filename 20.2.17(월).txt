@@ -1,0 +1,4 @@
+implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.5.4'
+
+DBMS : Data 입출력(I/O)을 처리하는 소프트웨어
+ex) MariaDB, Oracle, MS-SQL, MySQL

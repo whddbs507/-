@@ -1,0 +1,11 @@
+bitcamp-docs.sql
+
+< SQL >
+1. DDL -> 테이블 생성/변경/삭제
+2. DML -> 데이터 생성/변경/삭제
+3. DQL -> 데이터 조회
+
+실행 순서 : from => where => select
+
+native class : 자바가 아닌 c언어나 c++에서 유래한 코드로써
+.lib파일에 저장되어있다.
